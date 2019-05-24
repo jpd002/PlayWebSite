@@ -1,0 +1,63 @@
+td.NaviLeft
+{
+	background-image: url(../images/navi_left.png);
+	width: 148px;
+	height: 62px;
+	padding: 0px 0px 0px 0px;
+}
+
+td.NaviCenter
+{
+	background-image: url(../images/navi_center.png);
+	padding: 0px 0px 0px 0px;
+}
+
+td.NaviRight
+{
+	background-image: url(../images/navi_right.png);
+	width: 57px;
+	height: 62px;
+	padding: 0px 0px 0px 0px;
+}
+
+td.NaviButton
+{
+	padding: 0px 0px 0px 0px;
+	width: 100px;
+	height: 25px;
+}
+
+td.NaviButtonLeftBorder
+{
+	padding: 0px 0px 0px 0px;
+	width: 10px;
+	height: 25px;
+	background-image: url(../images/but_leftborder.png);
+}
+
+td.NaviButtonRightBorder
+{
+	padding: 0px 0px 0px 0px;
+	width: 10px;
+	height: 25px;
+	background-image: url(../images/but_rightborder.png);
+}
+
+td.NaviButtonBackground
+{
+	padding: 0px 0px 0px 0px;
+	height: 25px;
+	background-image: url(../images/but_background.png);
+}
+
+table.Navi
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table.NaviButtons
+{
+	width: 100%;
+	border-collapse: collapse;
+}

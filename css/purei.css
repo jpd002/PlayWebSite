@@ -1,0 +1,128 @@
+body
+{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+
+a.PageAnchor
+{
+	
+}
+
+a.PageAnchor:hover
+{
+	color: #000000;
+}
+
+a:link 
+{
+	color: #0000FF; 
+}
+
+a:visited 
+{ 
+	color: #0000FF; 
+}
+
+a:hover 
+{ 
+	color: #FF0000; 
+}
+
+img
+{
+	border: 0px;
+}
+
+td
+{
+	font-family: Verdana;
+	font-size: smaller;
+}
+
+td.Header 
+{ 
+	background-color: #BAA49B;
+	font-size: large;
+	text-align: center;
+	padding: 5px 5px 5px 5px;
+}
+
+td.Title
+{
+	background-color: #CCB9B1; 
+	padding: 5px 5px 5px 5px;
+	width: 100%;
+	text-align: left;
+}
+
+td.Description 
+{
+	background-color: #CCB9B1; 
+	padding: 5px 5px 5px 5px;
+}
+
+td.Date
+{
+	background-color: #CCB9B1; 
+	padding: 5px 5px 5px 5px;
+}
+
+td.Log
+{
+	background-color: #ECDAD4;
+	padding: 5px 5px 5px 5px;
+	vertical-align: top;
+}
+
+td.LogHeader
+{
+	background-color: #BAA49B;
+	padding: 5px 5px 5px 5px;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+td.Even 
+{ 
+	width: 50%; 
+}
+
+td.DevNavi
+{
+	text-align: center;
+	background-color: #BAA49B;
+	padding: 5px 5px 5px 5px;
+}
+
+th.CompatHeader
+{
+	width: 20%; 
+	text-align: center;
+}
+
+td.CompatDetail
+{
+	text-align: center;
+	font-size: large;
+}
+
+table.center 
+{ 
+	width: 75%; 
+	margin-left: 12.5%; 
+	margin-right: 12.5%; 
+}
+
+table.Compat
+{
+	width: 100%;
+	padding: 2px;
+}
+
+span.dateElem
+{
+	font-size: 10px;
+}

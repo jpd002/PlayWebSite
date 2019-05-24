@@ -1,0 +1,78 @@
+body
+{
+	margin-left: 4px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-right: 4px;
+
+	font-family: Verdana;
+}
+
+a.PageAnchor
+{
+
+}
+
+a.PageAnchor:hover
+{
+	color: #000000;
+}
+
+a:link 
+{
+	color: #0000FF; 
+}
+
+a:visited 
+{ 
+	color: #0000FF; 
+}
+
+a:hover 
+{ 
+	color: #FF0000; 
+}
+
+h3
+{
+	font-size: large;
+}
+
+img
+{
+	border: 0px;
+}
+
+table
+{
+	margin: 5px 5px 5px 5px;
+}
+
+th
+{
+	font-weight: bold;
+	padding: 4px 4px 4px 4px;
+	text-align: left;
+	border: solid 1px;
+}
+
+td
+{
+	padding: 4px 4px 4px 4px;
+	border: solid 1px;
+	width: 100%;
+}
+
+table.center 
+{ 
+	width: 75%; 
+	margin-left: 12.5%; 
+	margin-right: 12.5%; 
+}
+
+div.editZone
+{
+	border: double; 
+	padding: 5px 5px 5px 5px;
+}
+

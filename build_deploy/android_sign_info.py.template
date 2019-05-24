@@ -1,0 +1,7 @@
+def getAndroidSignInfo():
+	return {
+	'storeFile':     '',
+	'storePassword': '',
+	'keyAlias':      '',
+	'keyPassword':   '',
+	}
