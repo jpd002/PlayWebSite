@@ -44,7 +44,8 @@ include("config.php");
 		</table>
 		
 		<script>
-			var apiBaseUrl = "<?php echo $ps_api_base; ?>";
+			var apiBaseUrl = new URL("<?php echo $ps_api_base; ?>");
+			apiBaseUrl.protocol = window.location.protocol;
 			var xhr = new XMLHttpRequest();
 			var url = apiBaseUrl + "/api/builds";
 			xhr.onreadystatechange = 
