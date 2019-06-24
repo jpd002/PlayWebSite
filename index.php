@@ -57,8 +57,9 @@ $g_prevBase = $g_base + $g_logIncr;
 			{
 				var apiBaseUrl = new URL("<?php echo $ps_api_base; ?>");
 				apiBaseUrl.protocol = window.location.protocol;
+				var url = new URL("/api/compatibility", apiBaseUrl);
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", apiBaseUrl + "/api/compatibility", true);
+				xhr.open("GET", url, true);
 				xhr.setRequestHeader("Content-type", "application/json");
 				xhr.onload = 
 					function()
