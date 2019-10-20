@@ -6,6 +6,11 @@ function DisplayImage($id)
 	echo "<a href=\"./screenshots/i_" . $id . ".png\"><img src=\"ssthumb.php?id=" . $id . "\" alt=\"Screenshot #" . $id . "\" /></a>";
 }
 
+$games = [];
+$games["悪魔城ドラキュラ：闇の呪印 (Castlevania : Curse of Darkness)"] = ["000144", "000145", "000149"];
+$games["Atelier Iris : Eternal Mana"] = ["000131", "000120", "000127", "000124"];
+$games["Ys 1 &amp; 2 : Eternal Story"] = ["000080", "000087", "000088", "000089"];
+
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -17,99 +22,34 @@ function DisplayImage($id)
 	
 	<body>
 
-		<?php
+	<?php
 			include("navi.php");
 		?>
+		<div class="container-fluid">
 
-		<div>
-			<br />
-			<br />
+			<?php foreach($games as $title => $images_id): ?>
+			<div class="row justify-content-center p-4">
+				<div class="col-12 col-md-10">
+
+					<div class="card w-100">
+						<div class="card-body">
+							<h5 class="card-title text-center"><?= $title ?></h5>
+							<p class="card-text text-center">
+								<?php
+									foreach($images_id as $image_id)
+									{
+										DisplayImage($image_id);
+									}
+								?>
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<?php endforeach; ?>
+
 		</div>
-
-		<table class="center">
-
-			<tr>
-
-				<td class="Header">
-
-					悪魔城ドラキュラ：闇の呪印 (Castlevania : Curse of Darkness)
-					
-				</td>
-
-			</tr>
-			
-			<tr>
-			
-				<td class="Log">
-				
-					<div style="text-align: center;">
-					
-						<?php DisplayImage("000144"); ?>
-						<?php DisplayImage("000145"); ?>
-						<?php DisplayImage("000149"); ?>
-				
-					</div>
-					
-				</td>
-				
-			</tr>
-			
-			<tr>
-
-				<td class="Header">
-
-					Atelier Iris : Eternal Mana
-					
-				</td>
-
-			</tr>
-			
-			<tr>
-			
-				<td class="Log">
-				
-					<div style="text-align: center;">
-					
-						<?php DisplayImage("000131"); ?>
-						<?php DisplayImage("000120"); ?>
-						<?php DisplayImage("000127"); ?>
-						<?php DisplayImage("000124"); ?>
-				
-					</div>
-					
-				</td>
-				
-			</tr>
-
-			<tr>
-
-				<td class="Header">
-
-					Ys 1 &amp; 2 : Eternal Story
-					
-				</td>
-
-			</tr>
-			
-			<tr>
-			
-				<td class="Log">
-				
-					<div style="text-align: center;">
-					
-						<?php DisplayImage("000080"); ?>
-						<?php DisplayImage("000087"); ?>
-						<?php DisplayImage("000088"); ?>
-						<?php DisplayImage("000089"); ?>
-				
-					</div>
-					
-				</td>
-				
-			</tr>
-
-		</table>
-
 	</body>
 
 </html>
