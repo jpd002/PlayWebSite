@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <?php
 
-function DisplayImage($id)
+function DisplayImage($id, $group_id)
 {
-	echo "<a href=\"./screenshots/i_" . $id . ".png\"><img src=\"ssthumb.php?id=" . $id . "\" alt=\"Screenshot #" . $id . "\" /></a>";
+	echo "<a class=\"grouped_elements\" data-fancybox=\"group_$group_id\" href=\"./screenshots/i_" . $id . ".png\"><img src=\"ssthumb.php?id=" . $id . "\" alt=\"Screenshot #" . $id . "\" /></a>\n";
 }
 
 $games = [];
@@ -18,6 +18,12 @@ $games["Ys 1 &amp; 2 : Eternal Story"] = ["000080", "000087", "000088", "000089"
 		<title>Play! - Screenshots</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 		<?php require_once __DIR__ . "/include/header.include.php"; ?>
+		<script>
+			$(document).ready(function()
+			{
+				$("a.grouped_elements").fancybox();
+			});
+		</script>
 	</head>
 	
 	<body>
@@ -27,7 +33,7 @@ $games["Ys 1 &amp; 2 : Eternal Story"] = ["000080", "000087", "000088", "000089"
 		?>
 		<div class="container-fluid">
 
-			<?php foreach($games as $title => $images_id): ?>
+			<?php $i = 1; foreach($games as $title => $images_id): ?>
 			<div class="row justify-content-center p-4">
 				<div class="col-12 col-md-10">
 
@@ -38,7 +44,7 @@ $games["Ys 1 &amp; 2 : Eternal Story"] = ["000080", "000087", "000088", "000089"
 								<?php
 									foreach($images_id as $image_id)
 									{
-										DisplayImage($image_id);
+										DisplayImage($image_id, $i);
 									}
 								?>
 							</p>
@@ -47,7 +53,7 @@ $games["Ys 1 &amp; 2 : Eternal Story"] = ["000080", "000087", "000088", "000089"
 
 				</div>
 			</div>
-			<?php endforeach; ?>
+			<?php ++$i; endforeach; ?>
 
 		</div>
 	</body>
