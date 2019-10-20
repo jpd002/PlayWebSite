@@ -15,7 +15,7 @@
 				<a class="nav-link" href="links.php">Links</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="anout.php">About</a>
+				<a class="nav-link" href="about.php">About</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="screenshots.php">Screen shots</a>
