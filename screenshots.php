@@ -12,8 +12,7 @@ function DisplayImage($id)
 	<head>
 		<title>Play! - Screenshots</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="css/purei.css" />
-		<link rel="stylesheet" type="text/css" href="css/navi.css" />
+		<?php require_once __DIR__ . "/include/header.include.php"; ?>
 	</head>
 	
 	<body>

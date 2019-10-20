@@ -19,8 +19,7 @@ else
 		<title>Play! - Development Log</title>
 		<link rel="alternate" title="RSS (Developments)" href="devlogrss.php" type="application/rss+xml" />
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="css/purei.css" />
-		<link rel="stylesheet" type="text/css" href="css/navi.css" />
+		<?php require_once __DIR__ . "/include/header.include.php"; ?>
 	</head>
 	
 	<body>
