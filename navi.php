@@ -6,6 +6,9 @@
 	<div class="collapse navbar-collapse" id="navbarColor02">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
+				<a class="nav-link" href="https://www.patreon.com/bePatron?u=7311516">Patreon <i class="fab fa-patreon"></i></a>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link" href="blog.php">Blog</a>
 			</li>
 			<li class="nav-item">
