@@ -60,6 +60,7 @@ $games["Ys 1 &amp; 2 : Eternal Story"] = ["000080", "000087", "000088", "000089"
 			<?php ++$i; endforeach; ?>
 
 		</div>
+		<?php include_once __DIR__ . "/include/footer.include.php"; ?>
 	</body>
 
 </html>

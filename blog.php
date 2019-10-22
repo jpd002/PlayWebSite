@@ -80,7 +80,7 @@ $g_prevBase = $g_base + $g_logIncr;
 				</div>
 			</div>
 		</div>
-
+		<?php include_once __DIR__ . "/include/footer.include.php"; ?>
 	</body>
 
 </html>
