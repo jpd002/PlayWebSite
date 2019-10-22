@@ -9,6 +9,3 @@
 
 <script type="text/javascript" src="js/jquery.fancybox.js"></script>
 <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
-
-<link rel="stylesheet" type="text/css" href="css/purei.css" />
-<link rel="stylesheet" type="text/css" href="css/navi.css" />
