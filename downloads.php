@@ -7,6 +7,10 @@ include("config.php");
 	<head>
 		<title>Play! - Downloads</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta property="og:title" content="Play! - Downloads">
+		<meta property="og:description" content="Get your automated builds here.">
+		<meta property="og:image" content="<?= $g_base_url; ?>/images/PREVIEW_GRAPH.png">
+		<meta property="og:url" content="<?= $g_base_url; ?>/downloads.php">
 
 		<?php require_once __DIR__ . "/include/header.include.php"; ?>
 

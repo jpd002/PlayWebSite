@@ -29,6 +29,10 @@ $g_prevBase = $g_base + $g_logIncr;
 		<title>Play! - Development Log</title>
 		<link rel="alternate" title="RSS (Developments)" href="devlogrss.php" type="application/rss+xml" />
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta property="og:title" content="Play! - Development Log">
+		<meta property="og:description" content="Stay Up-to-date with the latest developements.">
+		<meta property="og:image" content="<?= $g_base_url; ?>/images/PREVIEW_GRAPH.png">
+		<meta property="og:url" content="<?= $g_base_url; ?>/blog.php">
 
 		<?php require_once __DIR__ . "/include/header.include.php"; ?>
 	</head>

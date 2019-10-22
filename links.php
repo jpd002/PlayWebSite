@@ -4,6 +4,10 @@
 	<head>
 		<title>Play! - Links</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta property="og:title" content="Play! - Links">
+		<meta property="og:description" content="Various PS2 related resources.">
+		<meta property="og:image" content="<?= $g_base_url; ?>/images/PREVIEW_GRAPH.png">
+		<meta property="og:url" content="<?= $g_base_url; ?>/links.php">
 		<?php require_once __DIR__ . "/include/header.include.php"; ?>
 	</head>
 	

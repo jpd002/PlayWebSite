@@ -18,6 +18,10 @@ $games["Ys 1 &amp; 2 : Eternal Story"] = ["000080", "000087", "000088", "000089"
 		<title>Play! - Screenshots</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 		<?php require_once __DIR__ . "/include/header.include.php"; ?>
+		<meta property="og:title" content="Play! - Screenshot">
+		<meta property="og:description" content="Various screenshot of Play! in action.">
+		<meta property="og:image" content="<?= $g_base_url; ?>/images/PREVIEW_GRAPH.png">
+		<meta property="og:url" content="<?= $g_base_url; ?>/screenshots.php">
 		<script>
 			$(document).ready(function()
 			{

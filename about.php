@@ -4,6 +4,10 @@
 	<head>
 		<title>Play! - About</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta property="og:title" content="Play! - About">
+		<meta property="og:description" content="Contact: jean-philip.desjardins@polymtl.ca.">
+		<meta property="og:image" content="<?= $g_base_url; ?>/images/PREVIEW_GRAPH.png">
+		<meta property="og:url" content="<?= $g_base_url; ?>/about.php">
 		<?php require_once __DIR__ . "/include/header.include.php"; ?>
 	</head>
 	
