@@ -119,27 +119,27 @@ $g_play_videos = array_rand($g_youtube, 2);
 				<div class="col-lg-4 mb-4">
 					<div class="card h-100 copyable">
 						<div class="card-body d-flex flex-column justify-content-center align-items-center">
-							<h1 class="display-2 text-primary"><i class="fab fa-playstation"></i></h1>
-							<h4 class="card-title text-primary">PlayStation 2</h4>
-							<p class="card-text">PS2 was the most popular Sony console with over 156m sale world wide.</p>
+							<h1 class="display-2 text-primary"><i class="fas fa-microchip"></i></span></h1>
+							<h4 class="card-title text-primary">HLE BIOS</h4>
+							<p class="card-text">Play! is a HLE based emulator, so you do not need a BIOS extracted from a PlayStation 2® console to use it.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 mb-4">
 					<div class="card h-100 copyable">
 						<div class="card-body d-flex flex-column justify-content-center align-items-center">
-							<h1 class="display-2 text-primary"><i class="fas fa-compact-disc"></i></h1>
-							<h4 class="card-title text-primary">Games</h4>
-							<p class="card-text">PS2 library is made up over 2500 unique games.</p>
+							<h1 class="display-2 text-primary"><i class="fas fa-desktop"></i></h1>
+							<h4 class="card-title text-primary">Multiplatform</h4>
+							<p class="card-text">Supports a wide variety of platforms. That includes but not limited to Windows, Linux, Mac, iOS, Android, and Raspberry Pi.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 mb-4">
 					<div class="card h-100 copyable">
 						<div class="card-body d-flex flex-column justify-content-center align-items-center">
-							<h1 class="display-2 text-primary">.XYZ</h1>
-							<h4 class="card-title text-primary">VPU</h4>
-							<p class="card-text">PS2 didn't contain a dedicated GPU, but instead featured "Vector Processor Unit" for fast number crunching.</p>
+							<h1 class="display-2 text-primary"><i class="fas fa-sliders-h"></i></h1>
+							<h4 class="card-title text-primary">Easy To Use</h4>
+							<p class="card-text">Settings options are kept simple with no game specific options, so you can start playing with little to no configuration.</p>
 						</div>
 					</div>
 				</div>
