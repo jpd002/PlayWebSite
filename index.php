@@ -203,7 +203,7 @@ $g_play_videos = array_rand($g_youtube, 2);
 				<div class="col-lg-2 mb-4">
 					<div class="card h-100 copyable">
 						<div class="card-body d-flex flex-column justify-content-center align-items-center">
-							<h1 class="display-2 text-primary"><i class="fab fa-playstation fa-spin"></i></span></h1>
+							<h1 class="display-2 text-primary"><i class="fab fa-playstation"></i></span></h1>
 							<h4 class="card-title text-primary"><a href="https://github.com/jpd002/Play-Compatibility/issues?q=is%3Aissue+is%3Aopen+label%3Astate-playable">Playable</a></h4>
 							<p class="card-text"><div class="CompatDetail" id="compat-details-state-playable"></div></p>
 						</div>
