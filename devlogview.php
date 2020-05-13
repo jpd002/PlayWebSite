@@ -12,6 +12,10 @@ else
 	$g_devLogId = $_GET["id"];
 }
 
+$g_item = GetDevLog($g_devLogId);
+$g_entry = mysqli_fetch_assoc($g_item);
+$g_text = FormatBody($g_entry["Text"]);
+
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -19,8 +23,7 @@ else
 		<title>Play! - Development Log</title>
 		<link rel="alternate" title="RSS (Developments)" href="devlogrss.php" type="application/rss+xml" />
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="css/purei.css" />
-		<link rel="stylesheet" type="text/css" href="css/navi.css" />
+		<?php require_once __DIR__ . "/include/header.include.php"; ?>
 	</head>
 	
 	<body>
@@ -29,61 +32,21 @@ else
 			include("navi.php");
 		?>
 
-		<div>
-			<br />
-			<br />
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-10">
+					<div class="card w-100 my-2" id="newsId<?= $g_entry["ID"];?>">
+						<div class="card-body">
+							<h4 class="card-title"><b><?= $g_entry["Title"]; ?></b></h4>
+							<h6 class="card-subtitle mb-2 text-muted"><a href="devlogview.php?id=<?= $g_entry["ID"]; ?>">Posted on <?= $g_entry["Date"]; ?></a></h6>
+							<p class="card-text"><?= $g_text; ?></p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<?php
-			$g_item = GetDevLog($g_devLogId);
-			$g_entry = mysqli_fetch_assoc($g_item);
-			$g_text = FormatBody($g_entry["Text"]);
-		?>
-
-		<div>
-
-			<br />
-
-		</div>
-
-		<table class="center">
-				
-				<tr>
-
-					<td class="Title" id="newsId<?php echo($g_entry["ID"]);?>">
-
-						<b>
-							<?php echo($g_entry["Title"]); ?>
-						</b>
-						<br />
-						<span class="dateElem">
-							<a href="devlogview.php?id=<?php echo($g_entry["ID"]); ?>">Posted on <?php echo($g_entry["Date"]); ?></a>
-						</span>
-
-					</td>
-
-				</tr>
-
-				<tr>
-
-					<td class="Log">
-
-						<?php echo($g_text); ?>
-
-					</td>
-
-				</tr>
-
-			</table>
-		
-		<div>
-
-			<br />
-
-		</div>
-		
-		<br />
-
+		<?php include_once __DIR__ . "/include/footer.include.php"; ?>
 	</body>
 
 </html>

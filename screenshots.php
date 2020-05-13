@@ -1,10 +1,15 @@
 <!DOCTYPE HTML>
 <?php
 
-function DisplayImage($id)
+function DisplayImage($id, $group_id)
 {
-	echo "<a href=\"./screenshots/i_" . $id . ".png\"><img src=\"ssthumb.php?id=" . $id . "\" alt=\"Screenshot #" . $id . "\" /></a>";
+	echo "<a class=\"grouped_elements\" data-fancybox=\"group_$group_id\" href=\"./screenshots/i_" . $id . ".png\"><img src=\"ssthumb.php?id=" . $id . "\" alt=\"Screenshot #" . $id . "\" /></a>\n";
 }
+
+$games = [];
+$games["悪魔城ドラキュラ：闇の呪印 (Castlevania : Curse of Darkness)"] = ["000144", "000145", "000149"];
+$games["Atelier Iris : Eternal Mana"] = ["000131", "000120", "000127", "000124"];
+$games["Ys 1 &amp; 2 : Eternal Story"] = ["000080", "000087", "000088", "000089"];
 
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,105 +17,50 @@ function DisplayImage($id)
 	<head>
 		<title>Play! - Screenshots</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="css/purei.css" />
-		<link rel="stylesheet" type="text/css" href="css/navi.css" />
+		<?php require_once __DIR__ . "/include/header.include.php"; ?>
+		<meta property="og:title" content="Play! - Screenshot">
+		<meta property="og:description" content="Various screenshot of Play! in action.">
+		<meta property="og:image" content="<?= $g_base_url; ?>/images/PREVIEW_GRAPH.png">
+		<meta property="og:url" content="<?= $g_base_url; ?>/screenshots.php">
+		<script>
+			$(document).ready(function()
+			{
+				$("a.grouped_elements").fancybox();
+			});
+		</script>
 	</head>
 	
 	<body>
 
-		<?php
+	<?php
 			include("navi.php");
 		?>
+		<div class="container-fluid">
 
-		<div>
-			<br />
-			<br />
+			<?php $i = 1; foreach($games as $title => $images_id): ?>
+			<div class="row justify-content-center p-4">
+				<div class="col-12 col-md-10">
+
+					<div class="card w-100">
+						<div class="card-body">
+							<h5 class="card-title text-center"><?= $title ?></h5>
+							<p class="card-text text-center">
+								<?php
+									foreach($images_id as $image_id)
+									{
+										DisplayImage($image_id, $i);
+									}
+								?>
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<?php ++$i; endforeach; ?>
+
 		</div>
-
-		<table class="center">
-
-			<tr>
-
-				<td class="Header">
-
-					悪魔城ドラキュラ：闇の呪印 (Castlevania : Curse of Darkness)
-					
-				</td>
-
-			</tr>
-			
-			<tr>
-			
-				<td class="Log">
-				
-					<div style="text-align: center;">
-					
-						<?php DisplayImage("000144"); ?>
-						<?php DisplayImage("000145"); ?>
-						<?php DisplayImage("000149"); ?>
-				
-					</div>
-					
-				</td>
-				
-			</tr>
-			
-			<tr>
-
-				<td class="Header">
-
-					Atelier Iris : Eternal Mana
-					
-				</td>
-
-			</tr>
-			
-			<tr>
-			
-				<td class="Log">
-				
-					<div style="text-align: center;">
-					
-						<?php DisplayImage("000131"); ?>
-						<?php DisplayImage("000120"); ?>
-						<?php DisplayImage("000127"); ?>
-						<?php DisplayImage("000124"); ?>
-				
-					</div>
-					
-				</td>
-				
-			</tr>
-
-			<tr>
-
-				<td class="Header">
-
-					Ys 1 &amp; 2 : Eternal Story
-					
-				</td>
-
-			</tr>
-			
-			<tr>
-			
-				<td class="Log">
-				
-					<div style="text-align: center;">
-					
-						<?php DisplayImage("000080"); ?>
-						<?php DisplayImage("000087"); ?>
-						<?php DisplayImage("000088"); ?>
-						<?php DisplayImage("000089"); ?>
-				
-					</div>
-					
-				</td>
-				
-			</tr>
-
-		</table>
-
+		<?php include_once __DIR__ . "/include/footer.include.php"; ?>
 	</body>
 
 </html>
