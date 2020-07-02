@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `purei_devlog` (
   `ID` int(11) NOT NULL auto_increment,
   `Title` varchar(100) NOT NULL default '',
-  `Date` datetime NOT NULL default '0000-00-00',
+  `Date` datetime NOT NULL default current_timestamp,
   `Text` text NOT NULL,
   PRIMARY KEY  (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
