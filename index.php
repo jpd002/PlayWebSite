@@ -50,7 +50,7 @@ $g_prevBase = $g_base + $g_logIncr;
 			{
 				var stateElement = document.getElementById("compat-details-" + stateName);
 				var state = states.find(function(state) { return state.state === stateName; });
-				stateElement.innerText = Math.floor(state.count / total * 100) + "%";
+				stateElement.innerText = (state.count / total * 100).toFixed(2) + "%";
 			}
 
 			function fetchCompatibility() 
