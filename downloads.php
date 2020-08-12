@@ -67,11 +67,11 @@ include("config.php");
 						}
 						{
 							var element = document.getElementById("build-download-win32x86");
-							element.setAttribute("href", "https://s3.us-east-2.amazonaws.com/playbuilds/" + buildInfo.commitHash + "/Play-0.30-32.exe");
+							element.setAttribute("href", "https://s3.us-east-2.amazonaws.com/playbuilds/" + buildInfo.commitHash + "/Play-x86-32.exe");
 						}
 						{
 							var element = document.getElementById("build-download-win32x64");
-							element.setAttribute("href", "https://s3.us-east-2.amazonaws.com/playbuilds/" + buildInfo.commitHash + "/Play-0.30-64.exe");
+							element.setAttribute("href", "https://s3.us-east-2.amazonaws.com/playbuilds/" + buildInfo.commitHash + "/Play-x86-64.exe");
 						}
 						{
 							var element = document.getElementById("build-download-macos");

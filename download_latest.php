@@ -10,10 +10,10 @@ if(!isset($_REQUEST['platform']))
 switch($_REQUEST['platform'])
 {
 	case "win32x86":
-		$url = "https://s3.us-east-2.amazonaws.com/playbuilds/%COMMIT_HASH%/Play-0.30-32.exe";
+		$url = "https://s3.us-east-2.amazonaws.com/playbuilds/%COMMIT_HASH%/Play-x86-32.exe";
 		break;
 	case "win32x64":
-		$url = "https://s3.us-east-2.amazonaws.com/playbuilds/%COMMIT_HASH%/Play-0.30-64.exe";
+		$url = "https://s3.us-east-2.amazonaws.com/playbuilds/%COMMIT_HASH%/Play-x86-64.exe";
 		break;
 	case "macos":
 		$url = "https://s3.us-east-2.amazonaws.com/playbuilds/%COMMIT_HASH%/Play.dmg";
