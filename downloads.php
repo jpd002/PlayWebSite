@@ -113,7 +113,9 @@ include("config.php");
 						<br />
 						<br />
 						
-						<a href="./downloads/play/weekly/">Weekly Builds (for Windows, macOS, Android and iOS)</a>
+						<a href="./downloads/play/stable/">Stable Builds (for Windows, macOS, Linux, Android and iOS)</a>
+						<br />
+						<a href="https://play.google.com/store/apps/details?id=com.virtualapplications.play">Google Play Store (for Android)</a>
 						<br />
 						<a href="http://cydia.purei.org">Cydia Repository (for iOS)</a>
 						<br />
@@ -129,12 +131,6 @@ include("config.php");
 						<div>
 							Downloads: <a id="build-download-win32x86">Win32 (x86)</a> | <a id="build-download-win32x64">Win32 (x64)</a> | <a id="build-download-macos">macOS</a> | <a id="build-download-linux">Linux</a> | <a id="build-download-android">Android</a> | <a id="build-download-ios">iOS</a>
 						</div>
-						
-						<br />
-						
-						Prerequisites (for Windows):
-						<br />
-						<a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=2DA43D38-DB71-4C1B-BC6A-9B6652CD92A3&amp;displaylang=en">DirectX Runtime</a>
 					</div>
 				</td>
 			</tr>
