@@ -15,7 +15,7 @@ $devLogCount = mysqli_fetch_row($devLogCountQuery)[0];
 		<title>Play! Website - Admin Zone</title>
 	</head>
 	<body>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 		<script type="text/javascript">
 		
