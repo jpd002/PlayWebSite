@@ -117,7 +117,7 @@ $g_prevBase = $g_base + $g_logIncr;
 			
 				<td class="Log">
 				
-					Play! is an attempt at creating a PlayStation 2 emulator for the Win32, Linux, macOS, iOS and Android platforms. For more information about this project
+					Play! is a PlayStation2 emulator for Windows, macOS, UNIX, Android, iOS &amp; <a href="https://playjs.purei.org">web browser</a> platforms. For more information about this project
 					please visit the "<a href="about.php">About</a>" section of this site.
 				
 				</td>
