@@ -1,0 +1,30 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: default_db
+      MYSQL_USER: username
+      MYSQL_PASSWORD: password
+    ports:
+      - "9906:3306"
+  web:
+    build: ./php/.
+    container_name: php_web
+    depends_on:
+      - db
+    volumes:
+      - ..:/var/www/html/
+    ports:
+      - "9000:80"
+    tty: true
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - '9001:80'
+    restart: always
+    environment:
+        PMA_HOST: db
+    depends_on:
+        - db
