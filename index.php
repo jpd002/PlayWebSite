@@ -55,9 +55,9 @@ $g_prevBase = $g_base + $g_logIncr;
 
 			function fetchCompatibility() 
 			{
-				var apiBaseUrl = new URL("<?php echo $ps_api_base; ?>");
-				apiBaseUrl.protocol = window.location.protocol;
-				var url = new URL("/api/compatibility", apiBaseUrl);
+				var staticBaseUrl = new URL("<?php echo $ps_static_base; ?>");
+				staticBaseUrl.protocol = window.location.protocol;
+				var url = new URL("compat_summary.json", staticBaseUrl);
 				var xhr = new XMLHttpRequest();
 				xhr.open("GET", url, true);
 				xhr.setRequestHeader("Content-type", "application/json");
