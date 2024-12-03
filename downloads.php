@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <?php
 include("config.php");
+$g_buildCommitMessage = "0.68";
+$g_buildCommitHash = "69ce62f6";
+$g_buildCommitDate = "November 22, 2024 8:33:04 AM";
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -30,19 +33,7 @@ include("config.php");
 			</tr>
 		</table>
 		
-		<div>
-			<br />
-		</div>
-		
-		<table class="center">
-			<tr>
-				<td class="Log">
-					<b>Notice:</b> Please download the prerequisite packages for the packages you're going to install if you haven't installed them previously. 
-					Also be sure to read the documentation if you're not sure about the way of using the program you have installed!
-				</td>
-			</tr>
-		</table>
-		
+<!--
 		<script>
 			var apiBaseUrl = new URL("<?php echo $ps_api_base; ?>");
 			apiBaseUrl.protocol = window.location.protocol;
@@ -94,7 +85,7 @@ include("config.php");
 			xhr.open("GET", url, true);
 			xhr.send();
 		</script>
-		
+-->
 		<div>
 			<br />
 		</div>
@@ -113,15 +104,7 @@ include("config.php");
 						<br />
 						<br />
 						
-						<a href="./downloads/play/stable/">Stable Builds (for Windows, macOS, Linux, Android and iOS)</a>
-						<br />
-						<a href="https://play.google.com/store/apps/details?id=com.virtualapplications.play">Google Play Store (for Android)</a>
-						<br />
-						<a href="http://cydia.purei.org">Cydia Repository (for iOS)</a>
-						<br />
-						<br />
-						
-						<b>Automated Builds (warning: might be unstable!)</b>
+						<b>Latest Stable Build</b>
 						<div>
 							Commit: <a target="_blank" id="build-commitMessage"></a>
 						</div>
@@ -131,6 +114,22 @@ include("config.php");
 						<div>
 							Downloads: <a id="build-download-win32x86">Win32 (x86)</a> | <a id="build-download-win32x64">Win32 (x64)</a> | <a id="build-download-macos">macOS</a> | <a id="build-download-linux">Linux</a> | <a id="build-download-android">Android</a> | <a id="build-download-ios">iOS</a>
 						</div>
+
+						<br />
+
+						<a href="https://github.com/jpd002/Play-/blob/master/README.md">General Documentation</a>
+						<br />
+
+						<br />
+
+						<a href="./downloads/play/stable/">Other Stable Builds (for Windows, macOS, Linux, Android and iOS)</a>
+						<br />
+						<a href="https://play.google.com/store/apps/details?id=com.virtualapplications.play">Google Play Store (for Android)</a>
+						<br />
+						<a href="https://flathub.org/apps/org.purei.Play">Flathub (for Linux)</a>
+						<br />
+						<a href="http://cydia.purei.org">Cydia Repository (for iOS)</a>
+						<br />
 					</div>
 				</td>
 			</tr>
@@ -200,28 +199,7 @@ include("config.php");
 			<tr>
 				<td class="Log">
 					<div>
-						Source code required to recompile Play! and PsfPlayer is available in the following Git repositories:
-						
-						<ul>
-							<li>Play! and PsfPlayer : <a href="https://github.com/jpd002/Play-">https://github.com/jpd002/Play-</a></li>
-							<li>Framework Library: <a href="https://github.com/jpd002/Play--Framework">https://github.com/jpd002/Play--Framework</a></li>
-							<li>CodeGen Library: <a href="https://github.com/jpd002/Play--CodeGen">https://github.com/jpd002/Play--CodeGen</a></li>
-						</ul>
-						
-						Play! and PsfPlayer also depends on these libraries that you will need to download and install:
-						
-						<ul>
-							<li><a href="http://boost.org">Boost C++ Libraries</a></li>
-							<li><a href="http://msdn.microsoft.com/en-us/directx/default.aspx">DirectX SDK</a></li>
-							<li><a href="http://zlib.net">zlib</a></li>
-							<li><a href="http://bzip.org">bzip2</a> (Required only for Play!)</li>
-							<li><a href="http://glew.sourceforge.net">OpenGL Extension Wrangler Library</a> (Required only for Play!)</li>
-							<li><a href="http://connect.creativelabs.com/openal/default.aspx">OpenAL SDK</a> (Required only to compile the OpenAL sound handler in PsfPlayer)</li>
-						</ul>
-						
-						I understand that the compilation environment might be hard to configure properly, so if you have any questions, don't hesitate to 
-						<a href="about.php">contact</a> me.
-						
+						Source code for this project is available at <a href="https://github.com/jpd002/Play-">https://github.com/jpd002/Play-</a>.
 					</div>
 				</td>
 			</tr>
@@ -229,5 +207,42 @@ include("config.php");
 
 		<br />
 		
+		<script>
+			{
+				var element = document.getElementById("build-commitMessage");
+				console.log(element);
+				element.setAttribute("href", "https://github.com/jpd002/Play-/commit/<?php echo $g_buildCommitHash; ?>");
+				element.innerHTML = "<?php echo $g_buildCommitMessage; ?> [<?php echo $g_buildCommitHash; ?>]";
+			}
+			{
+				var element = document.getElementById("build-commitDate");
+				element.innerHTML = "<?php echo $g_buildCommitDate; ?>";
+			}
+			{
+				var element = document.getElementById("build-download-win32x86");
+				element.setAttribute("href", "./downloads/play/stable/<?php echo $g_buildCommitMessage; ?>/Play-x86-32.exe");
+			}
+			{
+				var element = document.getElementById("build-download-win32x64");
+				element.setAttribute("href", "./downloads/play/stable/<?php echo $g_buildCommitMessage; ?>/Play-x86-64.exe");
+			}
+			{
+				var element = document.getElementById("build-download-macos");
+				element.setAttribute("href", "./downloads/play/stable/<?php echo $g_buildCommitMessage; ?>/Play.dmg");
+			}
+			{
+				var element = document.getElementById("build-download-linux");
+				element.setAttribute("href", "./downloads/play/stable/<?php echo $g_buildCommitMessage; ?>/Play!-<?php echo $g_buildCommitHash; ?>-x86_64.AppImage");
+			}
+			{
+				var element = document.getElementById("build-download-android");
+				element.setAttribute("href", "./downloads/play/stable/<?php echo $g_buildCommitMessage; ?>/Play-release.apk");
+			}
+			{
+				var element = document.getElementById("build-download-ios");
+				element.setAttribute("href", "./downloads/play/stable/<?php echo $g_buildCommitMessage; ?>/Play.ipa");
+			}
+		</script>
+
 	</body>
 </html>
