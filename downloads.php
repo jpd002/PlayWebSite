@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <?php
 include("config.php");
-$g_buildCommitMessage = "0.68";
-$g_buildCommitHash = "69ce62f6";
-$g_buildCommitDate = "November 22, 2024 8:33:04 AM";
+$g_buildCommitMessage = "0.70";
+$g_buildCommitHash = "0bd77c19";
+$g_buildCommitDate = "May 23, 2025 1:06:29 PM";
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
